@@ -12,4 +12,4 @@ Machine Families:
 1. General Purpose
 2. Computer Optimaized
 3. memory optimized
-4. 
+4. GPU
