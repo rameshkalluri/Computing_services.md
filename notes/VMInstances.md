@@ -134,12 +134,108 @@ Custom Schedules: Flexibility in setting custom schedules based on your operatio
    - When launching a VM, you can specify the node affinity to ensure that the VM is placed on the dedicated node.
 
 ## Benefits of Sole-Tenant Nodes:
-``` Physical Isolation: VMs run on dedicated hardware, which helps meet compliance and security requirements.
+```
+Physical Isolation: VMs run on dedicated hardware, which helps meet compliance and security requirements.
 Performance Consistency: No resource contention with other tenants, ensuring better performance.
 Customization: Ability to specify the exact hardware configuration and resources for VMs.
-Compliance: Useful for workloads that need to meet strict regulatory and compliance standards. ```
+Compliance: Useful for workloads that need to meet strict regulatory and compliance standards.
+
+```
 ## Considerations:
-``` Cost: Sole-tenant nodes typically incur higher costs than shared nodes due to dedicated resources.
+
+```
+Cost: Sole-tenant nodes typically incur higher costs than shared nodes due to dedicated resources.
 Resource Availability: If there’s no available sole-tenant node in the selected zone, you may face limitations in scheduling VMs.
 Management: You need to manage the placement of VMs on sole-tenant nodes manually.
 ```
+
+# Committed Use Discounts (CUD) in GCP
+
+**Committed Use Discounts (CUD)** in Google Cloud Platform (GCP) allow you to receive significant discounts on specific GCP services by committing to a one- or three-year contract. These discounts apply to services such as Compute Engine, Cloud SQL, and BigQuery, enabling cost savings for predictable, long-term workloads.
+
+## Key Features of Committed Use Discounts:
+
+1. **Significant Savings**:
+   - Committed Use Discounts offer **up to 70% savings** on services compared to the standard pay-as-you-go pricing, depending on the service and commitment term.
+
+2. **Predictable Costs**:
+   - By committing to specific usage for a defined period (one or three years), you can better predict your cloud expenses and optimize your budget.
+
+3. **Discounts Available for Various Services**:
+   - CUDs are available for services like:
+     - **Compute Engine** (VMs)
+     - **Cloud SQL**
+     - **BigQuery**
+     - **Persistent Disk**
+     - **Cloud Storage**
+     - **Cloud Spanner**
+   
+4. **Flexible Payment Options**:
+   - Payments can be made upfront or on a yearly basis, depending on the service. For instance, Compute Engine CUDs can be paid **all at once** or **annually**.
+
+5. **Automatic Application of Discounts**:
+   - Once committed, the discount is automatically applied to the usage of the selected services without the need for manual intervention.
+
+## Types of Committed Use Discounts:
+
+1. **Compute Engine (VMs)**:
+   - For Compute Engine, you can commit to using a specific type of machine for a certain number of vCPUs, in a specific region. This can include **Standard, N1, N2, E2, and custom machine types**.
+   
+2. **Cloud SQL**:
+   - Discounts are available for Cloud SQL instances based on the instance’s size and region. A commitment ensures reduced costs for databases running on Cloud SQL.
+
+3. **BigQuery**:
+   - BigQuery CUDs are available for specific usage, such as **storage and queries**, and can provide substantial cost reductions for large-scale data analytics workloads.
+
+4. **Other Services**:
+   - Additional services such as **Cloud Storage** and **Cloud Spanner** also offer committed use discounts for long-term usage.
+
+## How Committed Use Discounts Work:
+
+1. **Commitment Term**:
+   - You can commit to a contract period of either **1 year** or **3 years**.
+
+2. **Usage Commitment**:
+   - For services like **Compute Engine**, you need to commit to specific usage such as a **fixed number of CPUs**, **memory**, or **storage** over the duration of the contract.
+
+3. **Payment Options**:
+   - **Upfront Payment**: Pay the entire committed amount upfront.
+   - **Annual Payment**: Pay on an annual basis, with a commitment to the full term.
+
+4. **Resource Matching**:
+   - You must match the **resource type, region, and machine configuration** to qualify for the discounts.
+
+## Example: Compute Engine Committed Use Discount
+
+Suppose you are planning to run a **N2 instance** with **4 vCPUs** for **one year** in the **us-central1** region.
+
+### Steps:
+1. **Choose the resource**:
+   - You select the **N2 instance** with **4 vCPUs**.
+2. **Commit to usage**:
+   - You commit to using this instance for one year.
+3. **Apply Discount**:
+   - You receive a discount (up to 70%) on the standard pricing for Compute Engine.
+   
+### Pricing Example:
+- **Standard Price**: $0.10 per hour.
+- **Discounted Price with CUD**: $0.03 per hour (assuming a 70% discount).
+
+You would pay **$0.03 per hour** instead of **$0.10 per hour** for the committed use period.
+
+## Benefits of Committed Use Discounts:
+
+1. **Cost Savings**: Significant discounts can help reduce cloud costs, especially for predictable and consistent workloads.
+2. **Financial Predictability**: Committing to a fixed term provides better financial predictability for long-term projects.
+3. **Simplified Billing**: Discounts are automatically applied, simplifying your billing and budgeting process.
+4. **Flexibility**: Multiple services and regions are eligible for committed use discounts, giving flexibility to match your needs.
+
+## Considerations:
+
+1. **Commitment**: You must be confident in your long-term resource usage since there are penalties for early termination.
+2. **Fixed Resources**: Committed Use Discounts apply to specific resources (e.g., machine types, regions) and cannot be easily changed during the term.
+3. **Upfront Costs**: Some discounts require payment upfront, which could be a financial burden depending on your cash flow.
+
+## Conclusion:
+Committed Use Discounts in GCP provide a valuable way to save on cloud resources by making long-term commitments. They help optimize costs for predictable workloads and enable better budgeting, but require careful planning and consideration of long-term usage.
+
